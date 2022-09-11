@@ -1,5 +1,7 @@
 .name{
     text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
 }
 
 .address{
@@ -14,3 +16,26 @@
     text-align: center;
 }
 
+.header{
+    background-color: antiquewhite;
+}
+
+body{
+    background-color: aqua;
+}
+
+head {
+    font-style: italic;
+}
+
+ul {
+    font-style: italic;
+}
+
+.job{
+    font-size: 25px;
+}
+
+.date{
+    font-size: 20px;
+}
