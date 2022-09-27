@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="stylesheet" type="text/css" href="https://s3.us-east-2.amazonaws.com/resume.mivancic.com/style.css"></link>
     <title> Matthew Ivancic</title>
 </head>
 <div id="header"></div>
@@ -60,3 +60,25 @@
     <li>Eagle Scout</li>
 </ul>
 </body>
+<footer>
+    <script>
+function updateCounter() {
+    fetch("https://a8h4km0nbk.execute-api.us-east-1.amazonaws.com/Production", {
+      method: "POST",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("something went wrong");
+        }
+      })
+      .then(
+        (data) =>
+          (document.getElementById("view-count").innerText = data.body)
+      );
+  }
+</script>
+<body onload="updateCounter()">
+    Visits: <span id="view-count" />
+</footer>
