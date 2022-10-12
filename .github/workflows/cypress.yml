@@ -19,6 +19,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          build: npm i -D cypress
-          spec: cypress/e2e/CloudResumechallenge.cy.js
-  
+          build: npm i -D cypress  
