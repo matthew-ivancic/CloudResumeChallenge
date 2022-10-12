@@ -20,6 +20,5 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           build: npm i -D cypress
-          config-file: cypress.config.js
           spec: CypressTests/e2e/CloudResumechallenge.cy.js
   
