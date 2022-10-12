@@ -16,4 +16,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          spec: CypressTests/cypress/e2e/CRFinal.js.cy.js
+          spec: CypressTests/cypress/e2e/CRCFinal.js.cy.js
