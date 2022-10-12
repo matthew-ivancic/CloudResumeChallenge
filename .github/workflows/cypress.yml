@@ -11,7 +11,8 @@ jobs:
     environment: production
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
