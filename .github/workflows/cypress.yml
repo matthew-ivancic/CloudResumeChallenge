@@ -16,5 +16,4 @@ jobs:
       - name: Cypress run
         uses: ./
         with:
-          working-directory: CypressTests/cypress/e2e
-          build: npx cypress info
+          spec: CypressTests/e2e/CloudResumechallenge.cy.js
