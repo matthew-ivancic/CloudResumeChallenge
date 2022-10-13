@@ -32,4 +32,6 @@ The tasks in the Cloud Resume challenge are as follows:
 
 15. CI/CD (Front End) - Create a second GitHub repository for your website code. Create GitHub Actions such that when you push new website code, the S3 bucket automatically gets updated. (You may need to invalidate your CloudFront cache in the code as well.) 
 
-16. Blog post - Finally, in the text of your resume, you should link a short blog post describing some things you learned while working on this project. 
+16. Blog post - Finally, in the text of your resume, you should link a short blog post describing some things you learned while working on this project.
+
+fdafdsa
