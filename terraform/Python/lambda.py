@@ -1,7 +1,6 @@
 import json, boto3
 
 client = boto3.client('dynamodb')
-#TableName = 'terraform.mivancic.com-VisitorCount'
 
 def lambda_handler(event, context):
     
