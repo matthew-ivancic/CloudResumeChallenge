@@ -34,4 +34,4 @@ The tasks in the Cloud Resume challenge are as follows:
 
 16. Blog post - Finally, in the text of your resume, you should link a short blog post describing some things you learned while working on this project.
 
-fdafdsa
+fdafdsafds
