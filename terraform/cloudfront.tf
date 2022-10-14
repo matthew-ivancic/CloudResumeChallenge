@@ -89,7 +89,7 @@ resource "aws_cloudfront_distribution" "root_s3_distribution" {
       headers = ["Origin"]
     }
 
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
     default_ttl            = 86400
     max_ttl                = 31536000
