@@ -2,7 +2,7 @@
 
 ![CloudResumeChallenge vpd](https://user-images.githubusercontent.com/111187499/195946326-07c4d65d-3758-494c-9d39-6f2a84d4f85a.jpg)
 
-To view the final product, please visit <resume.mivancic.com>
+To view the final product, please visit [resume.mivancic.com](https://www.resume.mivancic.com)
 
 
 For more info on the Cloud Resume Challenge and the objectives of this project:
