@@ -1,8 +1,4 @@
-**NOTE: All commits must be made to the Staging branch for testing before commiting to main.**
-
 ![CloudResumeChallenge vpd](https://user-images.githubusercontent.com/111187499/195946326-07c4d65d-3758-494c-9d39-6f2a84d4f85a.jpg)
-
-To view the final product, please visit [resume.mivancic.com](https://www.resume.mivancic.com)
 
 
 For more info on the Cloud Resume Challenge and the objectives of this project:
@@ -22,5 +18,3 @@ On commit to staging, the following tests are run:
 Once both tests have been passed and any terraform state changes have been reviewed, Staging branch can be committed against main. Once commited to main:
 
 1) [Terraform Apply](https://github.com/matthew-ivancic/CloudResumeChallenge/blob/main/.github/workflows/terraform_apply.yml) will apply pending terraform state changes to infrastructure
-
-Be careful not to delete the 'Staging' branch after merging. (Otherwise, recreate the branch)
