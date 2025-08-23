@@ -2,6 +2,14 @@ resource "aws_s3_bucket" "www_bucket" {
   bucket = "www.${var.bucket_name}"
 }
 
+resource "aws_s3_bucket_ownership_controls" "www_bucket" {
+  bucket = aws_s3_bucket.www_bucket.id
+
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+}
+
 resource "aws_s3_bucket_public_access_block" "www_bucket" {
   bucket = aws_s3_bucket.www_bucket.id
 
@@ -12,9 +20,12 @@ resource "aws_s3_bucket_public_access_block" "www_bucket" {
 }
 
 resource "aws_s3_bucket_acl" "www_bucket" {
-  depends_on = [aws_s3_bucket_public_access_block.www_bucket]
-  bucket     = aws_s3_bucket.www_bucket.id
-  acl        = "public-read"
+  depends_on = [
+    aws_s3_bucket_public_access_block.www_bucket,
+    aws_s3_bucket_ownership_controls.www_bucket
+  ]
+  bucket = aws_s3_bucket.www_bucket.id
+  acl    = "public-read"
 }
 
 resource "aws_s3_bucket_policy" "www_bucket" {
@@ -49,6 +60,14 @@ resource "aws_s3_bucket" "root_bucket" {
   bucket = var.bucket_name
 }
 
+resource "aws_s3_bucket_ownership_controls" "root_bucket" {
+  bucket = aws_s3_bucket.root_bucket.id
+
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+}
+
 resource "aws_s3_bucket_public_access_block" "root_bucket" {
   bucket = aws_s3_bucket.root_bucket.id
 
@@ -59,9 +78,12 @@ resource "aws_s3_bucket_public_access_block" "root_bucket" {
 }
 
 resource "aws_s3_bucket_acl" "root_bucket" {
-  depends_on = [aws_s3_bucket_public_access_block.root_bucket]
-  bucket     = aws_s3_bucket.root_bucket.id
-  acl        = "public-read"
+  depends_on = [
+    aws_s3_bucket_public_access_block.root_bucket,
+    aws_s3_bucket_ownership_controls.root_bucket
+  ]
+  bucket = aws_s3_bucket.root_bucket.id
+  acl    = "public-read"
 }
 
 resource "aws_s3_bucket_policy" "root_bucket" {
