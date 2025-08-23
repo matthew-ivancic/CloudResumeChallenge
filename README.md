@@ -18,3 +18,4 @@ On commit to staging, the following tests are run:
 Once both tests have been passed and any terraform state changes have been reviewed, Staging branch can be committed against main. Once commited to main:
 
 1) [Terraform Apply](https://github.com/matthew-ivancic/CloudResumeChallenge/blob/main/.github/workflows/terraform_apply.yml) will apply pending terraform state changes to infrastructure
+
