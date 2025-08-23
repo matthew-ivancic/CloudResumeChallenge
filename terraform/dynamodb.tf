@@ -9,14 +9,5 @@ resource "aws_dynamodb_table" "API_table" {
   }
 }
 
-resource "aws_dynamodb_table_item" "visitor_count" {
-  table_name = aws_dynamodb_table.API_table.name
-  hash_key   = aws_dynamodb_table.API_table.hash_key
-
-  item = <<ITEM
-  {
-    "stat": {"S": "Quantity"},
-    "viewCount": {"N":"0"}
-  }
-ITEM
-}
+# Note: Removed aws_dynamodb_table_item to prevent Terraform from resetting visitor count
+# The visitor count will be managed by the Lambda function and persist between deployments

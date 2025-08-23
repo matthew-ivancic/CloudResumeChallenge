@@ -1,4 +1,6 @@
 resource "aws_cloudfront_distribution" "www_s3_distribution" {
+  depends_on = [aws_acm_certificate_validation.cert_validation]
+  
   origin {
     domain_name = aws_s3_bucket_website_configuration.www_bucket.website_endpoint
     origin_id   = "S3-www.${var.bucket_name}"
@@ -60,6 +62,8 @@ resource "aws_cloudfront_distribution" "www_s3_distribution" {
 
 
 resource "aws_cloudfront_distribution" "root_s3_distribution" {
+  depends_on = [aws_acm_certificate_validation.cert_validation]
+  
   origin {
     domain_name = aws_s3_bucket_website_configuration.root_bucket.website_endpoint
     origin_id   = "S3-.${var.bucket_name}"
